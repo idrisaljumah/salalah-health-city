@@ -12,10 +12,10 @@ const AxesPage: React.FC = () => {
     };
 
     return (
-        <div className="py-12 sm:py-16 bg-white">
+        <div className="py-12 sm:py-16 bg-surface-primary">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-extrabold font-heading text-health-blue tracking-tight sm:text-5xl">
+                    <h1 className="text-4xl font-extrabold font-heading text-moss tracking-tight sm:text-5xl">
                         {content.title[language]}
                     </h1>
                     <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
@@ -29,7 +29,7 @@ const AxesPage: React.FC = () => {
                         return (
                              <div 
                                 key={axis.id}
-                                className={`bg-health-background rounded-lg shadow-md p-6 flex flex-col hover:shadow-xl transition-shadow duration-300 ${isClickable ? 'cursor-pointer' : 'cursor-default'}`}
+                                className={`bg-sage rounded-2xl shadow-md p-6 flex flex-col hover:shadow-xl transition-shadow duration-300 ${isClickable ? 'cursor-pointer' : 'cursor-default'}`}
                                 onClick={() => isClickable && setActiveAxis(axis.id)}
                                 role={isClickable ? 'button' : undefined}
                                 tabIndex={isClickable ? 0 : -1}
@@ -42,8 +42,8 @@ const AxesPage: React.FC = () => {
                                 }}
                             >
                                 <div className="flex items-center mb-4">
-                                    <div className="p-3 bg-health-blue/10 rounded-full">
-                                        <axis.icon className="w-8 h-8 text-health-blue" />
+                                    <div className="p-3 bg-moss/10 rounded-full">
+                                        <axis.icon className="w-8 h-8 text-moss" />
                                     </div>
                                     <h2 className="ms-4 text-xl font-bold font-heading text-gray-800">{axis.title[language]}</h2>
                                 </div>
@@ -51,7 +51,7 @@ const AxesPage: React.FC = () => {
                                 <div className="mt-6 pt-4 border-t border-gray-200">
                                     <div className="flex justify-between items-center">
                                         <span className="text-sm font-medium text-gray-700">{language === 'ar' ? 'عدد المعايير' : 'Number of Criteria'}</span>
-                                        <span className="text-lg font-bold text-health-blue">{axis.criteriaCount}</span>
+                                        <span className="text-lg font-bold text-moss">{axis.criteriaCount}</span>
                                     </div>
                                 </div>
                             </div>

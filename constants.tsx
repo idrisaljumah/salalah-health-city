@@ -1136,136 +1136,134 @@ export const RESOURCES_DATA: Resource[] = [
 export const PARTNERS_DATA: Partner[] = [
     { 
         name: { en: "Governor's Office of Dhofar", ar: "مكتب محافظ ظفار" }, 
-        logo: "https://dhofar.gov.om/assets/images/Logo-red.png", 
+        logo: `${import.meta.env.BASE_URL}logos/bf89a5004c.png`, 
         url: "https://dhofar.gov.om" 
     },
     { 
         name: { en: "Dhofar Municipality", ar: "بلدية ظفار" }, 
-        logo: "https://edm.gov.om/wp-content/uploads/2024/08/header-ovr-kh@2x.png", 
+        logo: `${import.meta.env.BASE_URL}logos/f3c7c2fe3e.png`, 
         url: "https://edm.gov.om/",
         backgroundColor: "#343743"
     },
     { 
         name: { en: "Directorate General of Culture, Sports and Youth", ar: "المديرية العامة للثقافة والرياضة والشباب" }, 
-        logo: "https://mcsy.om/wp-content/uploads/2021/08/Logo_AR-1.png", 
+        logo: `${import.meta.env.BASE_URL}logos/dc03735251.png`, 
         url: "https://mcsy.om/",
         backgroundColor: "#0F0D42"
     },
     { 
         name: { en: "Directorate General of Health Services", ar: "المديرية العامة للخدمات الصحية" }, 
-        logo: "https://moh.gov.om/images/logo-ministry-ar.png", 
+        logo: `${import.meta.env.BASE_URL}logos/9384abc613.png`, 
         url: "https://moh.gov.om/en/hospitals-directorates/governorate-healthcare-facilities/dhofar-governorate/" 
     },
     { 
         name: { en: "Directorate General of Education", ar: "المديرية العامة للتربية والتعليم" }, 
-        logo: "https://home.moe.gov.om/templates/moe/assets/images/icons/pe-scroll-small-icon-moe.png", 
+        logo: `${import.meta.env.BASE_URL}logos/moe.png`, 
         url: "https://home.moe.gov.om/region/dhofar/" 
     },
     { 
         name: { en: "Directorate General of Social Development", ar: "المديرية العامة للتنمية الإجتماعية" }, 
-        logo: "https://portal.mosd.gov.om/PortalResources/resources/portalTemplate/img/logo.png", 
+        logo: `${import.meta.env.BASE_URL}logos/136282eaf7.png`, 
         url: "https://portal.mosd.gov.om/webcenter/portal/oracle/webcenter/page/scopedMD/s356e4db6_ee31_4daa_978e_f907f716f004/Page783ad307_cd5a_40d5_9ef4_50d96674c1b8.jspx" 
     },
     { 
         name: { en: "Directorate General of Health Affairs at Dhofar Municipality", ar: "المديرية العامة للشؤون الصحية ببلدية ظفار" }, 
-        logo: "https://edm.gov.om/wp-content/uploads/2024/08/header-ovr-kh@2x.png", 
+        logo: `${import.meta.env.BASE_URL}logos/f3c7c2fe3e.png`, 
         url: "https://edm.gov.om/",
         backgroundColor: "#343743"
     },
     { 
         name: { en: "Directorate General of Agricultural, Fisheries and Water Resources", ar: "المديرية العامة للثروة الزراعية والسمكية وموارد المياه" }, 
-        logo: "https://www.mafwr.gov.om/images/tharawat_combine_logo.8a565880.svg", 
+        logo: `${import.meta.env.BASE_URL}logos/mafwr.png`, 
         url: "https://www.mafwr.gov.om/public/home" 
     },
     { 
         name: { en: "Directorate General of Endowments and Religious Affairs", ar: "المديرية العامة للأوقاف والشؤون الدينية" }, 
-        logo: "https://www.mara.gov.om/arabic/images/logo.png", 
         url: "https://www.mara.gov.om/arabic/home.aspx" 
     },
     { 
         name: { en: "Directorate General of Information", ar: "المديرية العامة للإعلام" }, 
-        logo: "https://www.omaninfo.om/templates/omaninfo2/assets/images/logo.png", 
+        logo: `${import.meta.env.BASE_URL}logos/b1674bb8b8.png`, 
         url: "https://www.omaninfo.om/oman.moi" 
     },
     { 
         name: { en: "Directorate General of Labour", ar: "المديرية العامة للعمل" }, 
-        logo: "https://www.mol.gov.om/images/logo-arab.svg", 
+        logo: `${import.meta.env.BASE_URL}logos/5408a35ef5.svg`, 
         url: "https://www.mol.gov.om/" 
     },
     { 
         name: { en: "Directorate General of Commerce, Industry and Investment Promotion", ar: "المديرية العامة للتجارة والصناعة وترويج الإستثمار" }, 
-        logo: "https://iili.io/fCisWuI.jpg", 
+        logo: `${import.meta.env.BASE_URL}logos/ccabd3825e.jpg`, 
         url: "https://tejarah.gov.om/ar",
         backgroundColor: "#821E1A"
     },
     { 
         name: { en: "Consumer Protection Authority", ar: "هيئة حماية المستهلك" }, 
-        logo: "https://cpa.gov.om/Style%20Library/Images/LOGO_AR.jpg", 
+        logo: `${import.meta.env.BASE_URL}logos/ea7ec361d2.jpg`, 
         url: "https://cpa.gov.om/ar/Pages/default.aspx" 
     },
     { 
         name: { en: "Environment Authority", ar: "المديرية العامة للبيئة" }, 
-        logo: "https://www.ea.gov.om/img/logoar2020.jpg", 
+        logo: `${import.meta.env.BASE_URL}logos/13b8bbd136.jpg`, 
         url: "https://www.ea.gov.om/ar" 
     },
     { 
         name: { en: "Civil Aviation Authority", ar: "هيئة الطيران المدني" }, 
-        logo: "https://www.caa.gov.om/images/logos/new/logo.png?v=1", 
+        logo: `${import.meta.env.BASE_URL}logos/30a4eccf3a.png?v=1`, 
         url: "https://www.caa.gov.om/" 
     },
     { 
         name: { en: "Civil Defence and Ambulance Department in Dhofar", ar: "إدارة الدفاع المدني والإسعاف بظفار" }, 
-        logo: "https://cdaa.gov.om/wp-content/uploads/2023/03/cropped-123.png", 
+        logo: `${import.meta.env.BASE_URL}logos/b3e7cfa9a7.png`, 
         url: "https://cdaa.gov.om/" 
     },
     { 
         name: { en: "Dhofar University", ar: "جامعة ظفار" }, 
-        logo: "https://ccba.du.edu.om/wp-content/uploads/2017/05/DU-Logo.png", 
+        logo: `${import.meta.env.BASE_URL}logos/e8d4c14b03.png`, 
         url: "https://www.du.edu.om/ar/" 
     },
     { 
         name: { en: "University of Technology and Applied Sciences", ar: "جامعة التقنية والعلوم التطبيقية" }, 
-        logo: "https://www.utas.edu.om/portals/0/images/utas-logo1.png", 
+        logo: `${import.meta.env.BASE_URL}logos/ae20663e7f.png`, 
         url: "https://www.utas.edu.om/Home" 
     },
     { 
         name: { en: "Oman College of Health Sciences - Dhofar Branch", ar: "كلية عمان للعلوم الصحية – فرع ظفار" }, 
-        logo: "https://moh-hei.edu.om/image/layout_set_logo?img_id=4545532&t=1764254196437", 
         url: "https://moh-hei.edu.om/ar/web/dhofar" 
     },
     { 
         name: { en: "Vocational College in Salalah", ar: "الكلية المهنية بصلالة" }, 
-        logo: "https://iili.io/fCiF53N.jpg", 
+        logo: `${import.meta.env.BASE_URL}logos/b8590a1cf7.jpg`, 
         url: "https://www.svc.edu.om/%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D8%A9" 
     },
     { 
         name: { en: "Omani Women's Association in Salalah", ar: "جمعية المرأة العمانية بصلالة" }, 
-        logo: "https://portal.mosd.gov.om/PortalResources/resources/portalTemplate/img/logo.png", 
+        logo: `${import.meta.env.BASE_URL}logos/136282eaf7.png`, 
         url: "https://portal.mosd.gov.om/webcenter/portal/oracle/webcenter/page/scopedMD/s356e4db6_ee31_4daa_978e_f907f716f004/Pageba9071ae_f581_46a3_929b_91914094b02d.jspx#" 
     },
     { 
         name: { en: "Salalah Volunteer Team", ar: "فريق صلالة التطوعي" }, 
-        logo: "https://pbs.twimg.com/profile_images/586870941092720640/JvCXFT8p_400x400.jpg", 
+        logo: `${import.meta.env.BASE_URL}logos/49ba192fb9.jpg`, 
         url: "https://x.com/salalahsvt?lang=ar" 
     },
     { 
-        name: { en: "OQ Basic Industries", ar: "شركة أوكيو للصناعات الأساسية" }, 
-        logo: "https://oqbi.om/wp-content/uploads/2025/11/main_logo.png", 
+        name: { en: "OQ Base Industries", ar: "شركة أوكيو للصناعات الأساسية" }, 
+        logo: `${import.meta.env.BASE_URL}logos/oqbi.png`, 
         url: "https://oqbi.om/ar/home-arabic/" 
     },
     { 
         name: { en: "EYE MAX", ar: "شركة اي ماكس" }, 
-        logo: "https://img.ge/ib/7xC4f16.jpg", 
+        logo: `${import.meta.env.BASE_URL}logos/380e0ec156.jpg`, 
         url: "https://www.facebook.com/eyemaxoman/"
     },
     { 
         name: { en: "Raysut Industrial City (Madayn)", ar: "مدينة ريسوت الصناعية (مدائن)" }, 
-        logo: "https://madayn.om/wp-content/uploads/2025/03/Layer_1-1.svg", 
+        logo: `${import.meta.env.BASE_URL}logos/39152daae2.svg`, 
         url: "https://www.madayn.om/Ar/Pages/Raysut.aspx" 
     },
     { 
         name: { en: "Nama Dhofar Services", ar: "شركة نماء لخدمات ظفار" }, 
-        logo: "https://dhofarservices.nama.om/_catalogs/masterpage/NDS/media/ng-ds-logo.svg", 
+        logo: `${import.meta.env.BASE_URL}logos/1caa52c6b2.svg`, 
         url: "https://dhofarservices.nama.om/ar-om/Pages/Home.aspx",
         backgroundColor: "#343743"
     },
@@ -1277,17 +1275,16 @@ export const PARTNERS_DATA: Partner[] = [
     },
     { 
         name: { en: "Oman Daily Newspaper", ar: "جريدة عمان" }, 
-        logo: "https://www.omandaily.om/theme_omandaily/images/logo.png", 
+        logo: `${import.meta.env.BASE_URL}logos/4e6aa0570d.png`, 
         url: "https://www.omandaily.om/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%D8%A9" 
     },
     { 
         name: { en: "Lubanah Electronic Newspaper", ar: "صحيفة لبانة الإلكترونية" }, 
-        logo: "https://lubanh.com/wp-content/uploads/2024/07/Asset-3.png", 
         url: "https://lubanh.com/" 
     },
     { 
         name: { en: "Al Balad Electronic Newspaper", ar: "صحيفة البلد الإلكترونية" }, 
-        logo: "http://albaladoman.com/wp-content/uploads/2016/05/logo6-4.png", 
+        logo: `${import.meta.env.BASE_URL}logos/fc301872b2.png`, 
         url: "https://albaladoman.com/category/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%B9%D9%85%D8%A7%D9%86%D9%8A%D8%A9/" 
     },
     { 

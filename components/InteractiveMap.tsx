@@ -52,29 +52,29 @@ const InteractiveMap: React.FC = () => {
     };
 
     return (
-        <section className="py-20 bg-white" aria-labelledby="map-title">
+        <section className="py-20 bg-surface-primary" aria-labelledby="map-title">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-10">
-                    <h2 id="map-title" className="text-3xl font-bold font-heading text-health-blue">{content.title[language]}</h2>
+                    <h2 id="map-title" className="text-3xl font-bold font-heading text-moss">{content.title[language]}</h2>
                     <p className="mt-2 text-text-secondary">{content.subtitle[language]}</p>
                 </div>
 
                 <div className="flex justify-center mb-6 space-x-4 rtl:space-x-reverse">
                     <button
                         onClick={() => setViewMode('image')}
-                        className={`px-6 py-2 rounded-full font-medium transition-colors ${viewMode === 'image' ? 'bg-health-blue text-white shadow-lg' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+                        className={`px-6 py-2 rounded-full font-medium transition-colors ${viewMode === 'image' ? 'bg-moss text-white' : 'bg-surface-primary text-text-secondary border border-border-color hover:bg-gray-100'}`}
                     >
                         {content.masterPlan[language]}
                     </button>
                     <button
                         onClick={() => setViewMode('google')}
-                        className={`px-6 py-2 rounded-full font-medium transition-colors ${viewMode === 'google' ? 'bg-health-blue text-white shadow-lg' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+                        className={`px-6 py-2 rounded-full font-medium transition-colors ${viewMode === 'google' ? 'bg-moss text-white' : 'bg-surface-primary text-text-secondary border border-border-color hover:bg-gray-100'}`}
                     >
                         {content.googleMap[language]}
                     </button>
                 </div>
 
-                <div className="relative w-full h-[600px] bg-gray-50 rounded-2xl overflow-hidden border border-border-color shadow-inner group">
+                <div className="relative w-full h-[600px] bg-surface-primary rounded-3xl overflow-hidden border border-border-color group">
                     {viewMode === 'image' ? (
                         <div 
                             className="w-full h-full relative cursor-move overflow-hidden"
@@ -96,14 +96,14 @@ const InteractiveMap: React.FC = () => {
                             />
                             
                             {/* Controls Overlay */}
-                            <div className="absolute bottom-6 right-6 flex flex-col gap-2 bg-white/90 backdrop-blur rounded-lg shadow-lg p-2 z-10">
-                                <button onClick={() => handleZoom(0.5)} className="p-2 hover:bg-gray-100 rounded text-health-blue" aria-label="Zoom In">
+                            <div className="absolute bottom-6 right-6 flex flex-col gap-2 bg-surface-primary/90 backdrop-blur rounded-2xl shadow-lg p-2 z-10">
+                                <button onClick={() => handleZoom(0.5)} className="p-2 hover:bg-gray-100 rounded text-moss" aria-label="Zoom In">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
                                 </button>
-                                <button onClick={() => handleZoom(-0.5)} className="p-2 hover:bg-gray-100 rounded text-health-blue" aria-label="Zoom Out">
+                                <button onClick={() => handleZoom(-0.5)} className="p-2 hover:bg-gray-100 rounded text-moss" aria-label="Zoom Out">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" /></svg>
                                 </button>
-                                <button onClick={resetZoom} className="p-2 hover:bg-gray-100 rounded text-health-blue" aria-label="Reset">
+                                <button onClick={resetZoom} className="p-2 hover:bg-gray-100 rounded text-moss" aria-label="Reset">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0 0h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 0h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0 0L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 0L15 15" /></svg>
                                 </button>
                             </div>

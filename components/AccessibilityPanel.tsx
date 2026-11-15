@@ -64,9 +64,9 @@ const AccessibilityPanel: React.FC = () => {
     return (
         <div className="fixed bottom-5 end-5 z-50">
             {isOpen && (
-                <div className="bg-surface-primary shadow-2xl rounded-lg p-4 w-64 border border-border-color mb-4">
+                <div className="bg-surface-primary shadow-2xl rounded-3xl p-5 w-72 border border-border-color mb-4">
                     <div className="flex justify-between items-center mb-4">
-                        <h3 className="font-bold text-text-primary">{content.title[language]}</h3>
+                        <h3 className="text-lg font-bold text-text-primary">{content.title[language]}</h3>
                          <button onClick={() => setIsOpen(false)} className="p-1 text-text-secondary hover:text-text-primary" aria-label={content.closePanel[language]}>
                             <CloseIcon className="w-5 h-5"/>
                         </button>
@@ -75,7 +75,7 @@ const AccessibilityPanel: React.FC = () => {
                         <li>
                             <button onClick={handleSpeak} className="w-full text-start flex items-center justify-between p-2 rounded hover:bg-surface-secondary">
                                 <span>{isSpeaking ? content.stopReading[language] : content.readPage[language]}</span>
-                                <SpeakerIcon className={`w-5 h-5 ${isSpeaking ? 'text-health-alert' : ''}`} />
+                                <SpeakerIcon className={`w-5 h-5 ${isSpeaking ? 'text-alert' : ''}`} />
                             </button>
                         </li>
                         <li className="flex items-center justify-between p-2">
@@ -89,7 +89,7 @@ const AccessibilityPanel: React.FC = () => {
                     </ul>
                 </div>
             )}
-            <button onClick={() => setIsOpen(!isOpen)} className="bg-health-blue text-white p-4 rounded-full shadow-lg hover:bg-opacity-80" aria-label={content.togglePanel[language]} aria-expanded={isOpen}>
+            <button onClick={() => setIsOpen(!isOpen)} className="bg-moss text-white p-4 rounded-full shadow-lg hover:bg-opacity-80" aria-label={content.togglePanel[language]} aria-expanded={isOpen}>
                 <AccessibilityIcon className="w-6 h-6"/>
             </button>
             <style>{`
@@ -116,7 +116,7 @@ const AccessibilityPanel: React.FC = () => {
                     transition: transform 0.3s;
                 }
                 .toggle-switch:checked {
-                    background-color: var(--health-green);
+                    background-color: rgb(var(--fern));
                 }
                 .toggle-switch:checked:before {
                     transform: translateX(14px);

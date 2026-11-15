@@ -20,22 +20,22 @@ const VolunteersPage: React.FC = () => {
     };
 
     return (
-        <div className="py-12 sm:py-16 bg-health-background min-h-[70vh]">
+        <div className="py-12 sm:py-16 bg-sage min-h-[70vh]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-                    <div className="bg-health-blue p-8 text-center">
+                <div className="max-w-3xl mx-auto bg-surface-primary rounded-2xl shadow-xl overflow-hidden">
+                    <div className="bg-moss p-8 text-center">
                         <h1 className="text-3xl font-extrabold font-heading text-white mb-2">
                             {content.title[language]}
                         </h1>
-                        <p className="text-blue-100 text-lg">
+                        <p className="text-white/80 text-lg">
                             {content.subtitle[language]}
                         </p>
                     </div>
                     
                     <div className="p-8 sm:p-12">
-                        <div className="bg-blue-50 border border-blue-100 rounded-xl p-6 text-center mb-8">
+                        <div className="bg-leaf/20 border border-leaf/50 rounded-xl p-6 text-center mb-8">
                             <p className="text-gray-700 font-medium mb-2">{content.emailNote[language]}</p>
-                            <a href={`mailto:${content.email}`} className="text-xl font-bold text-health-blue hover:underline block break-all">
+                            <a href={`mailto:${content.email}`} className="text-xl font-bold text-moss hover:underline block break-all">
                                 {content.email}
                             </a>
                         </div>
@@ -43,17 +43,17 @@ const VolunteersPage: React.FC = () => {
                         <form className="space-y-6" action={`mailto:${content.email}`} method="post" encType="text/plain">
                             <div>
                                 <label className="block text-sm font-bold text-gray-700 mb-1">{content.form.name[language]}</label>
-                                <input type="text" name="name" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-health-blue focus:border-transparent outline-none transition-all" required />
+                                <input type="text" name="name" className="w-full px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-moss focus:border-transparent outline-none transition-all" required />
                             </div>
                             
                             <div>
                                 <label className="block text-sm font-bold text-gray-700 mb-1">{content.form.phone[language]}</label>
-                                <input type="tel" name="phone" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-health-blue focus:border-transparent outline-none transition-all" required />
+                                <input type="tel" name="phone" className="w-full px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-moss focus:border-transparent outline-none transition-all" required />
                             </div>
 
                             <div>
                                 <label className="block text-sm font-bold text-gray-700 mb-1">{content.form.interest[language]}</label>
-                                <select name="interest" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-health-blue focus:border-transparent outline-none transition-all">
+                                <select name="interest" className="w-full px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-moss focus:border-transparent outline-none transition-all">
                                     <option value="Health">{language === 'ar' ? 'التوعية الصحية' : 'Health Awareness'}</option>
                                     <option value="Environment">{language === 'ar' ? 'البيئة' : 'Environment'}</option>
                                     <option value="Events">{language === 'ar' ? 'تنظيم الفعاليات' : 'Event Organization'}</option>
@@ -63,10 +63,10 @@ const VolunteersPage: React.FC = () => {
 
                             <div>
                                 <label className="block text-sm font-bold text-gray-700 mb-1">{content.form.message[language]}</label>
-                                <textarea name="message" rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-health-blue focus:border-transparent outline-none transition-all"></textarea>
+                                <textarea name="message" rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-moss focus:border-transparent outline-none transition-all"></textarea>
                             </div>
 
-                            <button type="submit" className="w-full py-3 px-4 bg-health-green text-white font-bold rounded-lg hover:bg-opacity-90 transition-transform transform hover:scale-[1.02] shadow-md">
+                            <button type="submit" className="w-full py-3 px-4 bg-fern text-white font-bold rounded-2xl hover:bg-opacity-90 transition-transform transform hover:scale-[1.02] shadow-md">
                                 {content.form.send[language]}
                             </button>
                         </form>

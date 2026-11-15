@@ -98,10 +98,10 @@ const AboutLogoPage: React.FC = () => {
     };
     
     return (
-        <div className="bg-white py-12 sm:py-16">
+        <div className="bg-surface-primary py-12 sm:py-16">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-8">
-                    <h1 className="text-4xl font-extrabold font-heading text-health-blue tracking-tight sm:text-5xl">
+                    <h1 className="text-4xl font-extrabold font-heading text-moss tracking-tight sm:text-5xl">
                         {content.title[language]}
                     </h1>
                 </div>
@@ -115,7 +115,7 @@ const AboutLogoPage: React.FC = () => {
                         <img 
                             src="https://i.im.ge/2025/11/10/nnFN90.Logo-design.png" 
                             alt={language === 'ar' ? 'شعار مدينة صلالة الصحية' : 'Salalah Health City Logo'}
-                            className="w-64 h-auto rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
+                            className="w-64 h-auto rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
                         />
                     </a>
                 </div>
@@ -125,7 +125,7 @@ const AboutLogoPage: React.FC = () => {
                     
                     <div className="space-y-8">
                         {sections.map(({ id, Icon, color, title, text }) => (
-                           <div key={id} className="flex items-start space-x-4 rtl:space-x-reverse bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-50">
+                           <div key={id} className="flex items-start space-x-4 rtl:space-x-reverse bg-surface-primary p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-50">
                                <div className="flex-shrink-0">
                                    <div className={`w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center ${color}`}>
                                        <Icon className="w-7 h-7" />

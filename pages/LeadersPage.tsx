@@ -20,14 +20,14 @@ const LeaderCard: React.FC<{
     const isChairman = variant === 'chairman';
     const isExecutive = variant === 'executive';
 
-    let containerClasses = "bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2 flex flex-col overflow-hidden border border-gray-100 group";
+    let containerClasses = "bg-surface-primary rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2 flex flex-col overflow-hidden border border-gray-100 group";
     let imageContainerClasses = "aspect-square w-full overflow-hidden p-0 relative bg-gray-50 rounded-t-lg";
     let textClasses = "p-4 text-center flex-grow flex flex-col justify-center";
     let nameClasses = "font-bold font-heading text-gray-900 mb-1";
-    let roleClasses = "text-health-blue font-medium mb-3";
+    let roleClasses = "text-moss font-medium mb-3";
 
     if (isChairman) {
-        containerClasses += " shadow-lg border-health-blue/20 ring-1 ring-health-blue/10";
+        containerClasses += " shadow-lg border-moss/20 ring-1 ring-moss/10";
         nameClasses += " text-xl sm:text-2xl";
         roleClasses += " text-lg";
     } else if (isExecutive) {
@@ -56,7 +56,7 @@ const LeaderCard: React.FC<{
                 <h3 className={nameClasses}>{leader.name[language]}</h3>
                 <p className={roleClasses}>{leader.role[language]}</p>
                 {leader.team && leader.team.length > 0 && (
-                    <button className="mt-auto px-4 py-2 bg-gray-100 text-health-blue text-sm font-bold rounded-full hover:bg-health-blue hover:text-white transition-colors opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 duration-300">
+                    <button className="mt-auto px-4 py-2 bg-gray-100 text-moss text-sm font-bold rounded-full hover:bg-moss hover:text-white transition-colors opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 duration-300">
                         {language === 'ar' ? 'عرض الفريق' : 'View Team'}
                     </button>
                 )}
@@ -81,10 +81,10 @@ const LeadersPage: React.FC = () => {
     const committeeHeads = LEADERS_DATA.slice(2);
 
     return (
-        <div className="py-12 sm:py-16 bg-health-background min-h-screen">
+        <div className="py-12 sm:py-16 bg-sage min-h-screen">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-extrabold font-heading text-health-blue tracking-tight sm:text-5xl">
+                    <h1 className="text-4xl font-extrabold font-heading text-moss tracking-tight sm:text-5xl">
                         {content.title[language]}
                     </h1>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
@@ -158,7 +158,7 @@ const LeadersPage: React.FC = () => {
                         onClick={() => setSelectedLeader(null)}
                     ></div>
                     
-                    <div className="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col md:flex-row overflow-hidden animate-fade-in-up">
+                    <div className="relative bg-surface-primary rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col md:flex-row overflow-hidden animate-fade-in-up">
                         <button 
                             onClick={() => setSelectedLeader(null)}
                             className="absolute top-4 right-4 z-10 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
@@ -178,8 +178,8 @@ const LeadersPage: React.FC = () => {
                         
                         {/* Details Section */}
                         <div className="w-full md:w-2/3 flex flex-col max-h-[60vh] md:max-h-[90vh]">
-                            <div className="p-6 md:p-8 bg-white shrink-0">
-                                <h2 className="text-2xl md:text-3xl font-bold font-heading text-health-blue mb-2">
+                            <div className="p-6 md:p-8 bg-surface-primary shrink-0">
+                                <h2 className="text-2xl md:text-3xl font-bold font-heading text-moss mb-2">
                                     {selectedLeader.name[language]}
                                 </h2>
                                 <p className="text-lg md:text-xl text-gray-600 font-medium">
@@ -189,16 +189,16 @@ const LeadersPage: React.FC = () => {
                             
                             {/* Team List */}
                             {selectedLeader.team && selectedLeader.team.length > 0 && (
-                                <div className="flex-1 overflow-y-auto p-6 md:p-8 pt-0 bg-white">
+                                <div className="flex-1 overflow-y-auto p-6 md:p-8 pt-0 bg-surface-primary">
                                     <div className="pt-6 border-t border-gray-100">
                                         <h3 className="text-lg font-bold font-heading text-gray-800 mb-4 flex items-center">
-                                            <span className="bg-health-blue w-1 h-6 rounded-full me-2"></span>
+                                            <span className="bg-moss w-1 h-6 rounded-full me-2"></span>
                                             {content.teamTitle[language]}
                                         </h3>
                                         <ul className="space-y-3">
                                             {selectedLeader.team.map((member, index) => (
-                                                <li key={index} className="flex items-start p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                                                    <span className="text-health-blue font-bold me-3 mt-1">•</span>
+                                                <li key={index} className="flex items-start p-3 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
+                                                    <span className="text-moss font-bold me-3 mt-1">•</span>
                                                     <span className="text-gray-700 leading-relaxed">{member[language] || member['ar']}</span>
                                                 </li>
                                             ))}

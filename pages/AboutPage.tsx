@@ -113,21 +113,21 @@ const AboutPage: React.FC = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <button
                     onClick={() => setCurrentPage('home')}
-                    className="flex items-center gap-2 text-gray-600 hover:text-health-blue transition-colors mb-8 group"
+                    className="flex items-center gap-2 text-gray-600 hover:text-moss transition-colors mb-8 group"
                 >
                     <ArrowBackIcon className={`w-5 h-5 transition-transform group-hover:-translate-x-1 ${language === 'ar' ? 'rotate-180' : ''}`} />
                     <span className="font-bold font-heading">{content.backHome[language]}</span>
                 </button>
 
                 <header className="text-center mb-12">
-                    <h1 className="text-4xl font-extrabold font-heading text-health-blue tracking-tight sm:text-5xl leading-tight">
+                    <h1 className="text-4xl font-extrabold font-heading text-moss tracking-tight sm:text-5xl leading-tight">
                         {content.title[language]}
                     </h1>
                 </header>
                 
                 <div ref={mainRef} className="max-w-4xl mx-auto space-y-12">
                     {/* Intro Section */}
-                    <section className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 animate-on-scroll">
+                    <section className="bg-surface-primary p-8 rounded-2xl shadow-sm border border-gray-100 animate-on-scroll">
                         <p className="text-lg text-text-secondary leading-relaxed mb-6">
                             {content.intro1[language]}
                         </p>
@@ -138,24 +138,24 @@ const AboutPage: React.FC = () => {
 
                     {/* Vision & Mission Grid */}
                     <div className="grid md:grid-cols-2 gap-8">
-                        <section className="bg-health-background p-8 rounded-2xl border-t-4 border-health-blue animate-on-scroll">
+                        <section className="bg-sage p-8 rounded-2xl border-t-4 border-moss animate-on-scroll">
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="p-3 bg-white rounded-full text-health-blue shadow-sm">
+                                <div className="p-3 bg-surface-primary rounded-full text-moss shadow-sm">
                                     <EyeIcon className="w-8 h-8" />
                                 </div>
-                                <h2 className="text-2xl font-bold font-heading text-health-blue">{content.visionTitle[language]}</h2>
+                                <h2 className="text-2xl font-bold font-heading text-moss">{content.visionTitle[language]}</h2>
                             </div>
                             <p className="text-lg text-text-secondary leading-relaxed">
                                 {content.visionText[language]}
                             </p>
                         </section>
 
-                        <section className="bg-health-background p-8 rounded-2xl border-t-4 border-health-green animate-on-scroll" style={{ transitionDelay: '200ms' }}>
+                        <section className="bg-sage p-8 rounded-2xl border-t-4 border-fern animate-on-scroll" style={{ transitionDelay: '200ms' }}>
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="p-3 bg-white rounded-full text-health-green shadow-sm">
+                                <div className="p-3 bg-surface-primary rounded-full text-fern shadow-sm">
                                     <RocketIcon className="w-8 h-8" />
                                 </div>
-                                <h2 className="text-2xl font-bold font-heading text-health-green">{content.missionTitle[language]}</h2>
+                                <h2 className="text-2xl font-bold font-heading text-fern">{content.missionTitle[language]}</h2>
                             </div>
                             <p className="text-lg text-text-secondary leading-relaxed">
                                 {content.missionText[language]}
@@ -164,9 +164,9 @@ const AboutPage: React.FC = () => {
                     </div>
 
                     {/* Goals Section */}
-                    <section className="bg-white p-8 rounded-2xl shadow-lg animate-on-scroll">
+                    <section className="bg-surface-primary p-8 rounded-2xl shadow-lg animate-on-scroll">
                         <div className="flex items-center gap-4 mb-8">
-                            <div className="p-3 bg-health-blue/10 rounded-full text-health-blue">
+                            <div className="p-3 bg-moss/10 rounded-full text-moss">
                                 <FlagIcon className="w-8 h-8" />
                             </div>
                             <h2 className="text-3xl font-bold font-heading text-gray-900">{content.goalsTitle[language]}</h2>
@@ -174,7 +174,7 @@ const AboutPage: React.FC = () => {
                         <ul className="space-y-4">
                             {content.goals.map((goal, idx) => (
                                 <li key={idx} className="flex items-start gap-3">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-health-blue/20 text-health-blue flex items-center justify-center font-bold text-sm mt-1">{idx + 1}</span>
+                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-moss/20 text-moss flex items-center justify-center font-bold text-sm mt-1">{idx + 1}</span>
                                     <span className="text-lg text-text-secondary leading-relaxed">{goal[language]}</span>
                                 </li>
                             ))}
@@ -182,12 +182,12 @@ const AboutPage: React.FC = () => {
                     </section>
 
                     {/* Work Axes Section */}
-                    <section className="bg-health-blue/5 p-8 rounded-2xl border border-health-blue/10 animate-on-scroll">
+                    <section className="bg-moss/5 p-8 rounded-2xl border border-moss/10 animate-on-scroll">
                         <div className="flex items-center gap-4 mb-6">
-                             <div className="p-3 bg-white rounded-full text-health-blue shadow-sm">
+                             <div className="p-3 bg-surface-primary rounded-full text-moss shadow-sm">
                                 <BriefcaseIcon className="w-8 h-8" />
                             </div>
-                            <h2 className="text-2xl font-bold font-heading text-health-blue">{content.axesTitle[language]}</h2>
+                            <h2 className="text-2xl font-bold font-heading text-moss">{content.axesTitle[language]}</h2>
                         </div>
                         <p className="text-lg text-text-secondary leading-relaxed">
                             {content.axesText[language]}
@@ -195,9 +195,9 @@ const AboutPage: React.FC = () => {
                     </section>
 
                     {/* Partners Section */}
-                    <section className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 animate-on-scroll">
+                    <section className="bg-surface-primary p-8 rounded-2xl shadow-sm border border-gray-100 animate-on-scroll">
                         <div className="flex items-center gap-4 mb-6">
-                             <div className="p-3 bg-health-green/10 rounded-full text-health-green">
+                             <div className="p-3 bg-fern/10 rounded-full text-fern">
                                 <UserGroupIcon className="w-8 h-8" />
                             </div>
                             <h2 className="text-2xl font-bold font-heading text-gray-900">{content.partnersTitle[language]}</h2>

@@ -21,7 +21,7 @@ const LanguageSwitcher: React.FC = () => {
         <button
             onClick={toggleLanguage}
             aria-label={language === 'en' ? 'Switch to Arabic' : 'التحويل للغة الإنجليزية'}
-            className="px-3 py-2 text-sm font-medium text-text-secondary bg-surface-secondary rounded-md hover:bg-border-color transition-colors"
+            className="px-5 py-2 text-sm font-medium text-white bg-moss rounded-full hover:bg-moss/90 transition-colors whitespace-nowrap"
         >
             {language === 'en' ? 'العربية' : 'English'}
         </button>
@@ -163,9 +163,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
 
     return (
         <>
-        <header className="bg-surface-primary/95 backdrop-blur-md shadow-md sticky top-0 z-[900] h-20 transition-all duration-300">
+        <header className="bg-sage/85 backdrop-blur-md border-b border-border-color/60 sticky top-0 z-[900] h-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
-                <div className="flex items-center justify-between h-full">
+                <div className="flex items-center justify-between gap-6 h-full">
                     
                     {/* Compact Logo for Navbar */}
                     <div className="flex items-center shrink-0 cursor-pointer" onClick={() => handleNavClick('home')}>
@@ -176,38 +176,38 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
                         />
                     </div>
 
-                    <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse" aria-label={language === 'ar' ? 'التنقل الرئيسي' : 'Main Navigation'}>
+                    <nav className="hidden xl:flex items-center gap-5" aria-label={language === 'ar' ? 'التنقل الرئيسي' : 'Main Navigation'}>
                         {NAV_LINKS.map(link => (
                             <button
                                 key={link.id}
                                 onClick={() => handleNavClick(link.id)}
-                                className={`font-medium text-text-secondary hover:text-health-blue transition-colors pb-1 border-b-2 ${currentPage === link.id ? 'text-health-blue border-health-blue' : 'border-transparent'}`}
+                                className={`text-sm lg:text-[0.95rem] whitespace-nowrap transition-colors pb-1 border-b-2 ${currentPage === link.id ? 'font-semibold text-moss border-moss' : 'font-medium text-text-secondary hover:text-moss border-transparent'}`}
                                 aria-current={currentPage === link.id ? 'page' : undefined}
                             >
                                 {link.label[language]}
                             </button>
                         ))}
                     </nav>
-                    <div className="hidden md:flex items-center space-x-3 rtl:space-x-reverse">
+                    <div className="hidden xl:flex items-center gap-3">
                         
                         {/* Search and Sitemap */}
                         <div ref={desktopSearchRef} className="relative flex items-center gap-2">
-                           <button onClick={() => setIsSitemapOpen(true)} className="p-2 text-text-secondary hover:text-health-blue transition-colors rounded-full hover:bg-surface-secondary" aria-label={language === 'ar' ? 'خارطة الموقع' : 'Sitemap'}>
+                           <button onClick={() => setIsSitemapOpen(true)} className="p-2 text-text-secondary hover:text-moss transition-colors rounded-full hover:bg-surface-secondary" aria-label={language === 'ar' ? 'خارطة الموقع' : 'Sitemap'}>
                                 <MapIcon className="w-6 h-6" />
                            </button>
-                           <div className="flex items-center bg-surface-secondary rounded-full pl-3 pr-2 py-1 shadow-inner border border-gray-200">
+                           <div className="flex items-center bg-surface-primary/70 rounded-full ps-3 pe-2 py-1.5 border border-border-color">
                                <SearchIcon className="w-5 h-5 text-text-secondary" />
                                <input
                                    type="search"
                                    placeholder={language === 'ar' ? 'ابحث...' : 'Search...'}
-                                   className="bg-transparent focus:outline-none text-sm w-32 transition-all duration-300 mx-2 focus:w-48"
+                                   className="bg-transparent focus:outline-none text-sm w-24 transition-all duration-300 mx-2 focus:w-40"
                                    value={searchQuery}
                                    onChange={(e) => setSearchQuery(e.target.value)}
                                    onFocus={() => setIsSearchActive(true)}
                                    aria-label={language === 'ar' ? 'بحث في الموقع' : 'Search site'}
                                />
                                 {recognitionRef.current && (
-                                <button onClick={handleListen} className={`p-1 rounded-full ${isListening ? 'text-health-alert animate-pulse' : 'text-text-secondary hover:text-health-blue'}`} aria-label={language === 'ar' ? 'بحث صوتي' : 'Search by voice'}>
+                                <button onClick={handleListen} className={`p-1 rounded-full ${isListening ? 'text-alert animate-pulse' : 'text-text-secondary hover:text-moss'}`} aria-label={language === 'ar' ? 'بحث صوتي' : 'Search by voice'}>
                                     <MicIcon className="w-5 h-5" />
                                 </button>
                                 )}
@@ -216,28 +216,14 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
                         </div>
 
                         <LanguageSwitcher />
-                        
-                        <div className="flex flex-col items-center">
-                             <button onClick={() => handleNavClick('dashboard')} className="px-4 py-2 text-health-blue border border-health-blue rounded-full hover:bg-health-blue hover:text-white shadow-sm transition-transform transform hover:scale-105 text-sm font-bold bg-transparent">
-                                {language === 'ar' ? 'لوحة المؤشرات' : 'Dashboard'}
-                            </button>
-                            <span className="text-[10px] text-health-alert font-bold mt-0.5">{language === 'ar' ? 'قريباً' : 'Coming soon'}</span>
-                        </div>
-
-                        <div className="flex flex-col items-center">
-                            <button onClick={() => handleNavClick('evaluation')} className="px-4 py-2 text-white bg-health-blue rounded-full hover:bg-opacity-90 shadow-sm transition-transform transform hover:scale-105 text-sm font-bold">
-                                {language === 'ar' ? 'الرصد والتقييم' : 'Monitoring and Evaluation'}
-                            </button>
-                            <span className="text-[10px] text-health-alert font-bold mt-0.5">{language === 'ar' ? 'قريباً' : 'Coming soon'}</span>
-                        </div>
                     </div>
                     
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center gap-2">
-                        <button onClick={() => setIsSitemapOpen(true)} className="p-2 text-text-secondary hover:text-health-blue" aria-label="Sitemap">
+                    <div className="xl:hidden flex items-center gap-2">
+                        <button onClick={() => setIsSitemapOpen(true)} className="p-2 text-text-secondary hover:text-moss" aria-label="Sitemap">
                             <MapIcon className="w-6 h-6" />
                         </button>
-                         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="inline-flex items-center justify-center p-2 rounded-md text-text-secondary hover:text-text-primary hover:bg-surface-secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-health-blue" aria-controls="mobile-menu" aria-expanded={isMenuOpen}>
+                         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="inline-flex items-center justify-center p-2 rounded-md text-text-secondary hover:text-text-primary hover:bg-surface-secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-moss" aria-controls="mobile-menu" aria-expanded={isMenuOpen}>
                             <span className="sr-only">Open main menu</span>
                             <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
@@ -249,7 +235,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
             
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden bg-surface-primary border-t border-border-color" id="mobile-menu">
+                <div className="xl:hidden bg-surface-primary border-t border-border-color max-h-[calc(100vh-5rem)] overflow-y-auto" id="mobile-menu">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                          <div ref={mobileSearchRef} className="relative px-2 mb-2">
                             <div className={`absolute inset-y-0 flex items-center pointer-events-none ${language === 'ar' ? 'right-0 pr-5' : 'left-0 pl-5'}`}>
@@ -258,7 +244,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
                             <input
                                 type="search"
                                 placeholder={language === 'ar' ? 'ابحث...' : 'Search...'}
-                                className={`block w-full bg-surface-secondary border-transparent rounded-full py-2 text-sm focus:outline-none focus:ring-2 focus:ring-health-blue ${language === 'ar' ? 'pr-12 text-right' : 'pl-12 text-left'}`}
+                                className={`block w-full bg-surface-secondary border-transparent rounded-full py-2 text-sm focus:outline-none focus:ring-2 focus:ring-moss ${language === 'ar' ? 'pr-12 text-right' : 'pl-12 text-left'}`}
                                 aria-label={language === 'ar' ? 'بحث في الموقع' : 'Search site'}
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -270,7 +256,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
                            <button
                                 key={link.id}
                                 onClick={() => handleNavClick(link.id)}
-                                className={`block w-full text-start px-3 py-2 rounded-md font-medium ${currentPage === link.id ? 'bg-health-blue text-white' : 'text-text-primary hover:bg-surface-secondary'}`}
+                                className={`block w-full text-start px-4 py-2 rounded-full font-medium ${currentPage === link.id ? 'bg-moss text-white' : 'text-text-primary hover:bg-surface-secondary'}`}
                                 aria-current={currentPage === link.id ? 'page' : undefined}
                            >
                                {link.label[language]}
@@ -280,18 +266,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
                     <div className="pt-4 pb-3 border-t border-border-color">
                         <div className="flex flex-col items-center px-5 space-y-3">
                             <LanguageSwitcher />
-                             <div className="w-full flex items-center justify-between">
-                                <button onClick={() => handleNavClick('dashboard')} className="flex-1 text-center px-4 py-2 text-health-blue border border-health-blue rounded-full hover:bg-health-blue hover:text-white shadow-sm text-sm font-bold bg-transparent">
-                                {language === 'ar' ? 'لوحة المؤشرات' : 'Dashboard'}
-                                </button>
-                                <span className="ml-2 text-xs text-health-alert font-bold">{language === 'ar' ? 'قريباً' : 'Coming soon'}</span>
-                            </div>
-                            <div className="w-full flex items-center justify-between">
-                                <button onClick={() => handleNavClick('evaluation')} className="flex-1 text-center px-4 py-2 text-white bg-health-blue rounded-full hover:bg-opacity-90 shadow-sm text-sm">
-                                {language === 'ar' ? 'الرصد والتقييم' : 'Monitoring and Evaluation'}
-                                </button>
-                                <span className="ml-2 text-xs text-health-alert font-bold">{language === 'ar' ? 'قريباً' : 'Coming soon'}</span>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,6 @@
 {
   "name": "Final Salalah Health City",
-  "description": "A secure, bilingual (Arabic-English) digital evaluation and information platform for Salalah Health City, a WHO-aligned community health initiative. The platform serves as a data submission system for beneficiaries, an information hub for committees, and showcases statistics, indicators, and progress.",
-  "requestFramePermissions": [
-    "microphone"
-  ],
+  "description": "A bilingual (Arabic-English) information website for Salalah Health City, a WHO-aligned community health initiative.",
+  "requestFramePermissions": [],
   "majorCapabilities": []
 }

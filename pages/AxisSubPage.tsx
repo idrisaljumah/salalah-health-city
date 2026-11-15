@@ -62,31 +62,31 @@ const AxisSubPage: React.FC = () => {
     };
 
     return (
-        <div className="py-12 sm:py-16 bg-white animate-fade-in">
+        <div className="py-12 sm:py-16 bg-surface-primary animate-fade-in">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
-                    <button onClick={() => setActiveAxis(null)} className="flex items-center space-x-2 rtl:space-x-reverse text-gray-600 hover:text-health-blue mb-8 transition-colors">
+                    <button onClick={() => setActiveAxis(null)} className="flex items-center space-x-2 rtl:space-x-reverse text-gray-600 hover:text-moss mb-8 transition-colors">
                         <BackIcon className="w-5 h-5" style={{ transform: rtlBackIconTransform }} />
                         <span className="font-medium">{content.back[language]}</span>
                     </button>
                     <div className="text-center mb-10">
-                        <div className="inline-block p-4 bg-health-blue/10 rounded-full mb-4">
-                            <axis.icon className="w-12 h-12 text-health-blue" />
+                        <div className="inline-block p-4 bg-moss/10 rounded-full mb-4">
+                            <axis.icon className="w-12 h-12 text-moss" />
                         </div>
-                        <h1 className="text-3xl font-extrabold font-heading text-health-blue tracking-tight sm:text-4xl">
+                        <h1 className="text-3xl font-extrabold font-heading text-moss tracking-tight sm:text-4xl">
                             {axis.title[language]}
                         </h1>
                          <p className="mt-3 text-lg text-gray-600">{axis.description[language]}</p>
                     </div>
                     
-                    <h2 className="text-2xl font-bold font-heading text-gray-800 mb-6 border-b-2 border-health-green pb-2">{content.title[language]}</h2>
+                    <h2 className="text-2xl font-bold font-heading text-gray-800 mb-6 border-b-2 border-fern pb-2">{content.title[language]}</h2>
 
                     {axis.criteria && axis.criteria.length > 0 ? (
                         isNumberedList ? (
                             <ol start={startNumber} className="space-y-4 list-decimal list-outside ms-5">
                                 {axis.criteria.map((criterion, index) => (
                                     <li key={index} className="ps-2">
-                                        <div className="p-4 bg-health-background rounded-lg shadow-sm">
+                                        <div className="p-4 bg-sage rounded-2xl shadow-sm">
                                             <span className="text-gray-700 leading-relaxed">{criterion.text[language]}</span>
                                             {criterion.actions && criterion.actions.length > 0 && (
                                                 <div className="mt-4 flex flex-wrap gap-3">
@@ -99,7 +99,7 @@ const AxisSubPage: React.FC = () => {
                                                             className={`inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 shadow-sm ${
                                                                 action.type === 'view'
                                                                     ? 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-                                                                    : 'bg-health-blue text-white hover:bg-opacity-90'
+                                                                    : 'bg-moss text-white hover:bg-opacity-90'
                                                             }`}
                                                         >
                                                             {action.type === 'view' ? <ViewIcon className="w-4 h-4" /> : <DownloadIcon className="w-4 h-4" />}
@@ -115,8 +115,8 @@ const AxisSubPage: React.FC = () => {
                         ) : (
                             <ul className="space-y-4">
                                 {axis.criteria.map((criterion, index) => (
-                                    <li key={index} className="flex items-start space-x-4 rtl:space-x-reverse p-4 bg-health-background rounded-lg shadow-sm">
-                                        <CheckCircleIcon className="w-6 h-6 text-health-green flex-shrink-0 mt-1" />
+                                    <li key={index} className="flex items-start space-x-4 rtl:space-x-reverse p-4 bg-sage rounded-2xl shadow-sm">
+                                        <CheckCircleIcon className="w-6 h-6 text-fern flex-shrink-0 mt-1" />
                                         <div className="flex-grow">
                                             <span className="text-gray-700 leading-relaxed">{criterion.text[language]}</span>
                                             {criterion.actions && criterion.actions.length > 0 && (
@@ -130,7 +130,7 @@ const AxisSubPage: React.FC = () => {
                                                             className={`inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 shadow-sm ${
                                                                 action.type === 'view'
                                                                     ? 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-                                                                    : 'bg-health-blue text-white hover:bg-opacity-90'
+                                                                    : 'bg-moss text-white hover:bg-opacity-90'
                                                             }`}
                                                         >
                                                             {action.type === 'view' ? <ViewIcon className="w-4 h-4" /> : <DownloadIcon className="w-4 h-4" />}

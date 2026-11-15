@@ -78,7 +78,7 @@ export interface Resource {
 
 export interface Partner {
   name: LocalizedString;
-  logo: string;
+  logo?: string;
   url: string;
   backgroundColor?: string;
 }

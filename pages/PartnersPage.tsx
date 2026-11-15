@@ -18,10 +18,10 @@ const PartnersPage: React.FC = () => {
     };
 
     return (
-        <div className="py-12 sm:py-16 bg-health-background min-h-screen">
+        <div className="py-12 sm:py-16 bg-sage min-h-screen">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-extrabold font-heading text-health-blue tracking-tight sm:text-5xl">
+                    <h1 className="text-4xl font-extrabold font-heading text-moss tracking-tight sm:text-5xl">
                         {content.title[language]}
                     </h1>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
@@ -36,10 +36,10 @@ const PartnersPage: React.FC = () => {
                             href={partner.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full border border-gray-100 hover:border-health-blue/20"
+                            className="group bg-surface-primary rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full border border-gray-100 hover:border-moss/20"
                         >
                             <div 
-                                className={`w-full h-32 mb-4 flex items-center justify-center p-2 rounded-lg transition-colors ${!partner.backgroundColor ? 'bg-gray-50 group-hover:bg-white' : ''}`}
+                                className={`w-full h-32 mb-4 flex items-center justify-center p-2 rounded-2xl transition-colors ${!partner.backgroundColor ? (partner.logo ? 'bg-gray-50 group-hover:bg-surface-primary' : 'bg-leaf/25') : ''}`}
                                 style={{ backgroundColor: partner.backgroundColor }}
                             >
                                 {partner.logo ? (
@@ -50,14 +50,14 @@ const PartnersPage: React.FC = () => {
                                         loading="lazy"
                                     />
                                 ) : (
-                                    <span className="text-4xl">🤝</span>
+                                    <span className="font-heading font-medium text-moss text-lg leading-snug px-3">{partner.name[language]}</span>
                                 )}
                             </div>
-                            <h3 className="font-bold font-heading text-gray-800 group-hover:text-health-blue transition-colors text-sm sm:text-base mb-2 line-clamp-2">
+                            <h3 className={`${partner.logo ? '' : 'sr-only '}font-bold font-heading text-gray-800 group-hover:text-moss transition-colors text-sm sm:text-base mb-2 line-clamp-2`}>
                                 {partner.name[language]}
                             </h3>
                              {partner.url && partner.url !== '#' && (
-                                <ExternalLinkIcon className="w-4 h-4 text-gray-400 group-hover:text-health-blue opacity-0 group-hover:opacity-100 transition-opacity mt-auto" />
+                                <ExternalLinkIcon className="w-4 h-4 text-gray-400 group-hover:text-moss opacity-0 group-hover:opacity-100 transition-opacity mt-auto" />
                             )}
                         </a>
                     ))}

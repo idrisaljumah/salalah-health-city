@@ -19,20 +19,20 @@ const Footer: React.FC = () => {
     };
     
     return (
-        <footer className="bg-surface-primary border-t border-border-color mt-12">
-            <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center text-text-secondary">
+        <footer className="bg-[#232E1B] text-white/75 mt-16">
+            <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
                 <div className="max-w-4xl mx-auto mb-6">
-                    <h3 className="text-lg font-bold font-heading text-text-primary mb-2">{content.accessibilityTitle[language]}</h3>
+                    <h3 className="text-xl font-bold font-heading text-white mb-3">{content.accessibilityTitle[language]}</h3>
                     <p className="text-sm mb-2">{content.accessibilityStatement[language]}</p>
                     <p className="text-sm">
                         {content.accessibilityContact[language]} {' '}
-                        <button onClick={() => setCurrentPage('contact')} className="text-health-blue hover:underline font-medium">
+                        <button onClick={() => setCurrentPage('contact')} className="text-leaf hover:underline font-medium">
                             executiveoffice.shc@gmail.com
                         </button>
                     </p>
                 </div>
                 <div className="flex justify-center mt-4 space-x-6 rtl:space-x-reverse mb-4">
-                    <a href="https://x.com/SalHealthCity" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-health-blue" aria-label="X (Twitter)">
+                    <a href="https://x.com/SalHealthCity" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white" aria-label="X (Twitter)">
                         <span className="sr-only">X (Twitter)</span>
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                         </svg>
                     </a> */}
                 </div>
-                <p>&copy; {new Date().getFullYear()} {content.copyright[language]}</p>
+                <p className="text-sm text-white/60 border-t border-white/10 pt-5">&copy; {new Date().getFullYear()} {content.copyright[language]}</p>
             </div>
         </footer>
     );

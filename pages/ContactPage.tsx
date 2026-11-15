@@ -27,10 +27,10 @@ const ContactPage: React.FC = () => {
     };
 
     return (
-        <div className="py-12 sm:py-16 bg-white">
+        <div className="py-12 sm:py-16 bg-surface-primary">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-extrabold font-heading text-health-blue tracking-tight sm:text-5xl">
+                    <h1 className="text-4xl font-extrabold font-heading text-moss tracking-tight sm:text-5xl">
                         {content.title[language]}
                     </h1>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
@@ -38,46 +38,46 @@ const ContactPage: React.FC = () => {
                     </p>
                 </div>
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div className="bg-health-background p-8 rounded-lg">
+                    <div className="bg-sage p-8 rounded-2xl">
                         <h2 className="text-2xl font-bold font-heading text-gray-800 mb-6">{language === 'ar' ? 'أرسل لنا استفسارًا' : 'Send us an inquiry'}</h2>
                         <form className="space-y-6">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">{content.formName[language]}</label>
-                                <input type="text" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-health-blue focus:border-health-blue" />
+                                <input type="text" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-moss focus:border-moss" />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">{content.formEmail[language]}</label>
-                                <input type="email" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-health-blue focus:border-health-blue" />
+                                <input type="email" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-moss focus:border-moss" />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">{content.formSubject[language]}</label>
-                                <input type="text" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-health-blue focus:border-health-blue" />
+                                <input type="text" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-moss focus:border-moss" />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">{content.formMessage[language]}</label>
-                                <textarea rows={4} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-health-blue focus:border-health-blue"></textarea>
+                                <textarea rows={4} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-moss focus:border-moss"></textarea>
                             </div>
                             <div>
-                                <button type="submit" className="w-full py-3 px-4 bg-health-blue text-white font-bold rounded-md hover:bg-opacity-90 transition-colors">
+                                <button type="submit" className="w-full py-3 px-4 bg-moss text-white font-bold rounded-md hover:bg-opacity-90 transition-colors">
                                     {content.formSubmit[language]}
                                 </button>
                             </div>
                         </form>
                     </div>
                      <div className="space-y-8">
-                        <div className="bg-health-background p-8 rounded-lg">
+                        <div className="bg-sage p-8 rounded-2xl">
                             <h2 className="text-2xl font-bold font-heading text-gray-800 mb-6">{content.contactInfo[language]}</h2>
                             <div className="space-y-4 text-gray-700">
                                 <div className="flex items-start space-x-3 rtl:space-x-reverse">
-                                    <svg className="w-6 h-6 text-health-blue flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                    <svg className="w-6 h-6 text-moss flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                                     <span>{content.address[language]}</span>
                                 </div>
                                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                                    <svg className="w-6 h-6 text-health-blue flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                                    <svg className="w-6 h-6 text-moss flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                                     <span dir="ltr">{content.phone[language]}</span>
                                 </div>
                                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                                    <svg className="w-6 h-6 text-health-blue flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                    <svg className="w-6 h-6 text-moss flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                     <span>{content.email[language]}</span>
                                 </div>
                                  <div className="pt-4">
@@ -85,7 +85,7 @@ const ContactPage: React.FC = () => {
                                         href="https://maps.app.goo.gl/ien87vzvVCsYUG43A" 
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="flex items-center space-x-2 rtl:space-x-reverse text-health-blue font-bold hover:underline"
+                                        className="flex items-center space-x-2 rtl:space-x-reverse text-moss font-bold hover:underline"
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
@@ -95,7 +95,7 @@ const ContactPage: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="rounded-lg overflow-hidden shadow-lg h-80 border border-border-color">
+                        <div className="rounded-2xl overflow-hidden shadow-lg h-80 border border-border-color">
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3814.8667668117755!2d54.12670127515689!3d17.03020408379736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDAxJzQ4LjciTiA1NMKwMDcnNDUuNCJF!5e0!3m2!1sen!2som!4v1764246669798!5m2!1sen!2som" 
                                 width="100%" 

@@ -29,10 +29,10 @@ const CommitteesPage: React.FC = () => {
     };
 
     return (
-        <div className="py-12 sm:py-16 bg-health-background">
+        <div className="py-12 sm:py-16 bg-sage">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-extrabold font-heading text-health-blue tracking-tight sm:text-5xl">
+                    <h1 className="text-4xl font-extrabold font-heading text-moss tracking-tight sm:text-5xl">
                         {content.title[language]}
                     </h1>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
@@ -44,26 +44,26 @@ const CommitteesPage: React.FC = () => {
                     {COMMITTEES_DATA.map((committee) => {
                         const isOpen = openCommitteeId === committee.id;
                         return (
-                            <div key={committee.id} className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out">
+                            <div key={committee.id} className="bg-surface-primary rounded-2xl shadow-md overflow-hidden transition-all duration-300 ease-in-out">
                                 <button
                                     onClick={() => handleToggle(committee.id)}
                                     className="w-full flex justify-between items-center p-5 text-start font-heading font-bold text-xl"
                                     aria-expanded={isOpen}
                                 >
-                                    <span className={isOpen ? 'text-health-blue' : 'text-gray-800'}>{committee.name[language]}</span>
-                                    <ChevronIcon className={`w-6 h-6 transition-transform duration-300 ${isOpen ? 'transform rotate-180 text-health-blue' : 'text-gray-500'}`} />
+                                    <span className={isOpen ? 'text-moss' : 'text-gray-800'}>{committee.name[language]}</span>
+                                    <ChevronIcon className={`w-6 h-6 transition-transform duration-300 ${isOpen ? 'transform rotate-180 text-moss' : 'text-gray-500'}`} />
                                 </button>
                                 <div
                                     className={`transition-all duration-500 ease-in-out overflow-hidden ${isOpen ? 'max-h-96' : 'max-h-0'}`}
                                 >
                                     <div className="p-5 pt-0">
-                                        <ul className={`space-y-3 border-${language === 'ar' ? 'r' : 'l'}-2 border-health-blue/50 p-${language === 'ar' ? 'r' : 'l'}-4`}>
+                                        <ul className={`space-y-3 border-${language === 'ar' ? 'r' : 'l'}-2 border-moss/50 p-${language === 'ar' ? 'r' : 'l'}-4`}>
                                             {committee.axes.map((axis, index) => (
                                                 <li key={index} className="text-gray-700">
                                                     {axis.id ? (
                                                         <button 
                                                             onClick={() => handleAxisClick(axis.id!)}
-                                                            className="text-start hover:text-health-blue hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-health-blue rounded px-1 -mx-1"
+                                                            className="text-start hover:text-moss hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-moss rounded px-1 -mx-1"
                                                         >
                                                             {axis.label[language]}
                                                         </button>

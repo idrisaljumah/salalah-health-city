@@ -42,10 +42,10 @@ const ResourcesPage: React.FC = () => {
     };
 
     return (
-        <div className="py-12 sm:py-16 bg-health-background">
+        <div className="py-12 sm:py-16 bg-sage">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-extrabold font-heading text-health-blue tracking-tight sm:text-5xl">
+                    <h1 className="text-4xl font-extrabold font-heading text-moss tracking-tight sm:text-5xl">
                         {content.title[language]}
                     </h1>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
@@ -55,7 +55,7 @@ const ResourcesPage: React.FC = () => {
                 
                 <div className="max-w-4xl mx-auto space-y-4">
                     {RESOURCES_DATA.map(resource => (
-                        <div key={resource.id} className="bg-white rounded-lg shadow-md p-4 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                        <div key={resource.id} className="bg-surface-primary rounded-2xl shadow-md p-4 flex items-center justify-between hover:bg-gray-50 transition-colors">
                             <div className="flex items-center space-x-4 rtl:space-x-reverse">
                                 <FileIcon type={resource.type} />
                                 <div>
@@ -68,7 +68,7 @@ const ResourcesPage: React.FC = () => {
                                     href={resource.url} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 bg-health-blue text-white rounded-md hover:bg-opacity-90 transition-colors text-sm font-medium"
+                                    className="flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 bg-moss text-white rounded-md hover:bg-opacity-90 transition-colors text-sm font-medium"
                                 >
                                     <span>{content.view[language]}</span>
                                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -77,7 +77,7 @@ const ResourcesPage: React.FC = () => {
                                     </svg>
                                 </a>
                             ) : (
-                                <button className="flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 bg-health-blue text-white rounded-md hover:bg-opacity-90 transition-colors text-sm font-medium">
+                                <button className="flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 bg-moss text-white rounded-md hover:bg-opacity-90 transition-colors text-sm font-medium">
                                     <span>{content.download[language]}</span>
                                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                                 </button>
